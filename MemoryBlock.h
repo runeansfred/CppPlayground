@@ -11,6 +11,8 @@ public:
 	    , _data{ new int[length] } 
 		{}; 
 
+		~MemoryBlock (); //Destructor 
+
 
 		
 
