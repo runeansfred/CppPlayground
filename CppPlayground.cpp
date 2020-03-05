@@ -2,7 +2,9 @@
 //
 
 #include <iostream>
+#include <vector>
 #include "Point.h"
+#include "MemoryBlock.h"
 //#include "SmartPtr.h"
 
 
@@ -54,11 +56,11 @@ int Add (int x, int y)
 
     int main ()
     {
-        double x{ 5 }, y{ 7 };
-        Test::Point p{ x, y };
-        std::cout << "This is the original point location: " << p << std::endl;
-        p.move (2, 2);
-        std::cout << "This is the new point location: " << p << std::endl;
+        std::vector<MemoryBlock> v; 
+        v.push_back (MemoryBlock (25)); 
+        v.push_back (MemoryBlock (75)); 
+
+        v.insert (v.begin () + 1, MemoryBlock (50)); 
 
         return 0;
     }
